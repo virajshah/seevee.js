@@ -1,0 +1,98 @@
+<html>
+	
+	<head>
+		<meta http-equiv="cache-control" content="no-store">
+		<script src="../../src/ccv.js"></script>
+		<script src="../../src/face.js"></script>
+		<style>
+			body,html{
+				background-color:#222;
+				text-align:center;
+				height:100%;
+			}
+			video,canvas{
+				position:absolute;
+				left:50%;
+				display:block;
+				top:0;
+				z-index: 1;
+				margin-left:-300px;
+			}
+			video{
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		
+		
+		<video id="input" width="100" height="80" autoplay></video>
+		<canvas id="output" width="640" height="480" ></canvas>
+	</body>
+	<script>
+
+// Global variables
+var video;
+var output;
+var outputcanvas;
+var rect = {};
+//set to false to disable webworkers
+var async = true;
+
+
+function init() {
+    video = document.getElementById('input');
+    outputcanvas = document.getElementById('output');
+    output = outputcanvas.getContext('2d');
+    // Replace the source of the video element with the stream from the camera    
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia('video', successCallback, errorCallback);
+        // Below is the latest syntax. Using the old syntax for the time being for backwards compatibility.
+        //navigator.getUserMedia({video: true}, successCallback, errorCallback);
+        function successCallback(stream) {
+        	console.log("success")
+            if (window.webkitURL) {
+                video.src = window.webkitURL.createObjectURL(stream);
+            } else {
+                video.src = stream;
+            }
+            output.width = video.videoWidth;
+            output.height = video.videoHeight;
+        }
+        function errorCallback(error) {
+            console.error('An error occurred: [CODE ' + error.code + ']');
+            return;
+        }
+    } else {
+        return;
+    }
+    
+    setInterval(processFrame, 40);
+}
+
+
+function processFrame() {
+	//copy over
+    output.drawImage(video, 0, 0);
+    // put image manipulation stuff in here
+    function post(comp) 
+    {
+		output.lineWidth = 2;
+		output.strokeStyle = 'rgba(230,87,0,0.8)';
+		/* draw detected area */
+		for (var i = 0; i < comp.length; i++) {
+			output.beginPath();
+			output.arc((comp[i].x + comp[i].width * 0.5) * 1, (comp[i].y + comp[i].height * 0.5) * 1,
+					(comp[i].width + comp[i].height) * 0.25 * 1 * 1.2, 0, Math.PI * 2);
+			output.stroke();
+		}
+	}
+	// Alex hack in
+	var comp = ccv.detect_objects({ "canvas" : ccv.grayscale(outputcanvas),"cascade" : cascade,"interval" : 1,"min_neighbors" : 1 });
+	post(comp);
+}
+
+window.onload = init;
+	</script>
+</html>
