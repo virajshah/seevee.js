@@ -18,16 +18,16 @@ In order for you to start using your input device, such as a webcam you must dow
 
 ### Google Chrome 
 To setup Chome
-* Download & install Chrome Canary: http://tools.google.com/dlpage/chromesxs
-* Open the browser and in the url field type: chrome://flags/
-* Enable "Enable Media Source API on <video> elements."
-* Enable "Enable MediaStream."
-* Restart Chrome Canary
+• Download & install Chrome Canary: http://tools.google.com/dlpage/chromesxs
+• Open the browser and in the url field type: chrome://flags/
+• Enable "Enable Media Source API on <video> elements."
+• Enable "Enable MediaStream."
+• Restart Chrome Canary
 
 ### Opera Experimental Build
 To setup Opera
-* Download and install this version of Opera: http://snapshot.opera.com/labs/camera/
-* Launch the application
+• Download and install this version of Opera: http://snapshot.opera.com/labs/camera/
+• Launch the application
 
 
 ## License
