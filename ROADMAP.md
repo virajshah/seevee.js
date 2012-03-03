@@ -52,6 +52,7 @@ WebGL features should be optional, it's still potentially possible that Microsof
 ### Output
 
 * Canvas Class
+* Buffer Class (double buffering offscreen)
 * Video Encoding Class
 * Audio Encoding Class
 * Image Encoding Class
