@@ -60,6 +60,7 @@ WebGL features should be optional, it's still potentially possible that Microsof
 ### Image Processing
 
 * Image Class
+* Pointer Class (for byte arrays etc)
 * Image Filter Class base to extend upon
 * Gaussian Blur Class
 * Median Blur Class
