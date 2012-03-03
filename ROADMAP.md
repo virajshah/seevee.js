@@ -80,6 +80,12 @@ WebGL features should be optional, it's still potentially possible that Microsof
 * Camera Class
 * Stream Class
 
+### Spatial Analysis
+
+* Space2D Class
+* Space3D Class
+.... more to come here, or perhaps burst out to more of an augmented reality class grouping...
+
 
 ### Object Detection
 
@@ -88,3 +94,17 @@ WebGL features should be optional, it's still potentially possible that Microsof
 * Descriptor Class
 * Feature Detection Class
 * Search Class
+
+
+
+## Documentation
+
+General class documentation needed
+
+
+## Demos & Examples
+
+Some simple 'getting started' style tutorials, then a few mixing in with other libraries jQuery etc, then perhaps a few advanced ons based on feature tracking and augmented reality as this tends to be impressive. 
+
+
+... to be continued 
