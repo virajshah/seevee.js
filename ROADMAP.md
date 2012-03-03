@@ -46,6 +46,7 @@ WebGL features should be optional, it's still potentially possible that Microsof
 * Custom Error Class
 * Browser (capability) Class
 * Dependency Loader / Bootstrapper
+* Events Class (extendable)
 
 
 ### Output
