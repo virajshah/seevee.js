@@ -91,8 +91,12 @@ WebGL features should be optional, it's still potentially possible that Microsof
 ### Video Processing
 
 * Video Class
-* Camera Class
 * Stream Class
+
+
+### Audio Processing
+
+Im not versed enoughin audio for this...
 
 ### Spatial Analysis
 
