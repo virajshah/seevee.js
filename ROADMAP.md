@@ -84,6 +84,9 @@ WebGL features should be optional, it's still potentially possible that Microsof
 * Erode Class
 * Dilate Class
 * Contours Class
+* Gamma Class
+* Gain Class
+
 
 ### Video Processing
 
