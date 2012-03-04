@@ -48,11 +48,19 @@ WebGL features should be optional, it's still potentially possible that Microsof
 * Dependency Loader / Bootstrapper
 * Events Class (extendable)
 
+### Input
+
+* Device Class
+* Loader Class 
+* Data Class
+* Stream Class (perhaps crossover with stream class) 
+
+
 
 ### Output
 
 * Canvas Class
-* Buffer Class (double buffering offscreen)
+* Buffer Class (double buffering offscreen) -- perhaps this shouldn't be in this grouping
 * Video Encoding Class
 * Audio Encoding Class
 * Image Encoding Class
@@ -60,6 +68,7 @@ WebGL features should be optional, it's still potentially possible that Microsof
 
 ### Image Processing
 
+* Pass Class (prep for node based compositing)
 * Image Class
 * Pointer Class (for byte arrays etc)
 * Image Filter Class base to extend upon
