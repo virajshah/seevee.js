@@ -1,4 +1,4 @@
-# JSCV: A Javascript Computer Vision Library
+# CeeVee: A Javascript Computer Vision Library
 
 Homepage: https://github.com/alex-m/JSCV
 
