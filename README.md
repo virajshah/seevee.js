@@ -1,6 +1,6 @@
 # CeeVee: A Javascript Computer Vision Library
 
-Homepage: https://github.com/alex-m/JSCV
+Homepage: https://github.com/alex-m/ceevee.js
 
 
 ## Project Goals
