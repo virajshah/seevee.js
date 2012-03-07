@@ -69,6 +69,8 @@ WebGL features should be optional, it's still potentially possible that Microsof
 
 ### Image Processing
 
+Each filter should be a Seperable kernel
+
 * Pass Class (prep for node based compositing)
 * Image Class
 * Pointer Class (for byte arrays etc)
